@@ -1,0 +1,5 @@
+module.exports = function(app){
+  var controllers = app.controllers.home;
+  app.get('/index', controllers.index)
+  app.get('/', controllers.index);
+}

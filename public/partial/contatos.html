@@ -1,0 +1,34 @@
+<!-- public/partials/contatos.html -->
+<div class="jumbotron">
+  <h1 class="text-center">Bem vindo ao Contatooh</h1>
+</div>
+<p ng-show="mensagem.texto">{{mensagem.texto}}</p>
+<a class="btn btn-primary" ng- href="#/contato">Novo contato</a>
+<input ng-model="filtro" type="search" placeholder="Procurar">
+<p ng-show="contatos.length">Contatos cadastrados: {{contatos.length}}</p>
+<p ng-hide="contatos.length" class="text-info">Você não possui contatos</p>
+<table class="table table-hover">
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Ações</th>
+    <th>Remover</th>
+  </tr>
+  <tr ng-repeat="contato in contatos | filter: filtro ">
+    <td><a ng-href="#/contatos/{{contato._id}}">{{contato.nome}}</a></td>
+    <td>{{contato.email}}</td>
+    <td class="text-center">Ação</td>
+    <td class="text-center"><button ng-click="remove(contato)"
+      class="btn btn-warning">
+      Remover
+    </button></td>
+  </tr>
+  <!--<tr>
+    <td>Contato</td>
+    <td>cont@example1.com.br</td>
+    <td class="text-center"><button ng-click="remove(contato)"
+      class="btn btn-warning">
+      Remover
+    </button></td>
+  </tr> -->
+</table>

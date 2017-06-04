@@ -1,0 +1,25 @@
+{
+  "name": "livromean",
+  "version": "1.0.0",
+  "description": "App to support MEAN learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisTei17/LivroMean.git"
+  },
+  "author": "Luis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisTei17/LivroMean/issues"
+  },
+  "homepage": "https://github.com/LuisTei17/LivroMean#readme",
+  "dependencies": {
+    "ejs": "^0.8.8",
+    "express": "^4.8.8",
+    "express-load": "^1.1.15",
+    "mongodb": "^2.2.28"
+  }
+}
